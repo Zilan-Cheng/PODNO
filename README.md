@@ -78,14 +78,21 @@ $$
 
 ### **— Generation of POD Basis**
 
-In Step 3, the POD basis can equivalently be obtained from the SVD:
+There are three ways to calculate the POD basis:
+
+- SVD of the covariance matrix
 
 $$
-X = H \Sigma S^T,
+C = XX^T = H \Sigma S^2H^T
 $$
 
-without explicitly computing X X^T.  
-Alternatively, since C is symmetric, one may compute its eigen-decomposition directly.
+- SVD of the snapshot matrix
+
+$$
+X = H \Sigma S^T
+$$
+
+- Since C is symmetric, one may compute its eigen-decomposition directly.
 
 ---
 
