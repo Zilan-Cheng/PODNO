@@ -171,7 +171,7 @@ $$
 \text{Case 3: } X_{\text{type 3}} = [u_0, u_1, \dots, u_{N_T},\ u_1 - u_0, u_2 - u_1, \dots, u_{N_T} - u_{N_T-1}].
 $$
 
-- **Efficient approach (used here):** take snapshots only from the *initial condition* and *final solution*.  
+- **Efficient approach (used here):** take snapshots only from the *initial condition* and *final solution* as Case 1.  
 - **Higher-accuracy alternative:** if full temporal evolution is available, include intermediate time steps as additional snapshots as Case 2.
 
 ---
