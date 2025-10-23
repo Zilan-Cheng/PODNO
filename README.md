@@ -53,19 +53,20 @@ Please make sure to place this file in the same parent directory as the correspo
 
 ### **Inputs**
 
-- Training data triples $ \{ (a_j, \epsilon_j, u_j) \}_{j=1}^{M/2} $
-- Number of POD layers $ L $
-- Cumulative energy ratio threshold $ \rho_0 $
+- Training data triples { (a_j, \epsilon_j, u_j) }_{j=1}^{M/2}
+
+- Number of POD layers L 
+- Cumulative energy ratio threshold \rho_0
+
 
 ### **Outputs**
 
-- Predictions $ u'_i $ for new input pairs $ (a'_i, \epsilon'_i) $
-
+- Predictions u'_i for new input pairs (a'_i, \epsilon'_i)
 ---
 
 ### **Step 1. Data Preprocessing**
 
-Standardize the training datasets  $ \{ a_j \}_{j=1}^{M/2}, \{ \epsilon_j \}_{j=1}^{M/2}, \{ u_j \}_{j=1}^{M/2} $  using **Z-score normalization**.
+Standardize the training datasets using **Z-score normalization**.
 
 ---
 
@@ -77,40 +78,50 @@ $$
 X = [a_1, a_2, \dots, a_{M/2};\ u_1, u_2, \dots, u_{M/2}],
 $$
 
-where each column contains the standardized samples $ (a, u) $.  
-Then $ X \in \mathbb{R}^{n_{\text{mesh}} \times M} $,  
-with $ n_{\text{mesh}} $ denoting the number of spatial degrees of freedom.
+where each column contains the standardized samples.  
 
 ---
 
 ### **Step 3. POD Basis Computation**
 
 1. Compute the covariance matrix:
+
    $$
    C = \frac{1}{M} X X^T.
    $$
+
 2. Perform singular value decomposition (SVD):
+
    $$
    C = H \Sigma^2 H^T,
    $$
-   where the columns of $ H $ are orthonormal POD modes.
+
+   where the columns of H are orthonormal POD modes.
 
 ---
 
 ### **Step 4. Mode Truncation**
 
 1. Compute the cumulative energy ratio:
+
    $$
    \rho(N) = \frac{E_N}{E_M} = \frac{\sum_{k=1}^N \lambda_k}{\sum_{k=1}^M \lambda_k}.
    $$
-2. Select the smallest $ N $ such that $ \rho(N) \geq \rho_0 $.
-3. Retain only the first $ N $ POD basis functions.
+
+2. Select the smallest $ N $ such that 
+
+$$ 
+\rho(N) \geq \rho_0.
+$$
+
+3. Retain only the first N POD basis functions.
 
 Define the POD transform and its inverse as:
 
 $$
 \Pi_N^{\mathrm{POD}}[v] = (\langle v, \phi_1 \rangle_{L^2}, \dots, \langle v, \phi_N \rangle_{L^2})^T,
 $$
+
 $$
 (\Pi_N^{\mathrm{POD}})^{-1}[\tilde{v}] = \sum_{k=1}^N \tilde{v}_k \phi_k.
 $$
@@ -119,23 +130,31 @@ $$
 
 ### **Step 5. Model Training**
 
-1. Initialize model parameters $ \theta^{(0)} \in \Theta $.
-2. Load the constructed POD basis $ \Pi_N^{\mathrm{POD}} $.
+1. Initialize model parameters 
+
+$$ 
+\theta^{(0)} \in \Theta 
+$$.
+
+2. Load the constructed POD basis.
 3. Train the model by minimizing the loss:
+
    $$
-   \theta^{(t+1)} = \arg\min_{\theta \in \Theta}
+   \hat{\theta} = \arg\min_{\theta \in \Theta}
    \mathcal{L}(\mathcal{N}_\theta(a_j, \epsilon_j), u_j),
    $$
-   obtaining the optimized parameters $ \hat{\theta} $.
+
+   obtaining the optimized parameters.
 
 ---
 
 ### **Step 6. Prediction**
 
-For new inputs $ (a'_i, \epsilon'_i) $, predict:
-$
+For new inputs, predict:
+
+$$
 u'_i = \mathcal{N}_{\hat{\theta}}(a'_i, \epsilon'_i).
-$
+$$
 
 ---
 
@@ -162,14 +181,14 @@ $$
 
 ### **— Generation of POD Basis**
 
-In Step 4, the POD basis can equivalently be obtained from the SVD:
+In Step 3, the POD basis can equivalently be obtained from the SVD:
 
 $$
 X = H \Sigma S^T,
 $$
 
-without explicitly computing $ X X^T $.  
-Alternatively, since $ C $ is symmetric, one may compute its eigen-decomposition directly.
+without explicitly computing X X^T.  
+Alternatively, since C is symmetric, one may compute its eigen-decomposition directly.
 
 ---
 
