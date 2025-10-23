@@ -86,15 +86,15 @@ where each column contains the standardized samples.
 
 1. Compute the covariance matrix:
 
-   $$
-   C = \frac{1}{M} X X^T.
-   $$
+$$
+C = \frac{1}{M} X X^T.
+$$
 
 2. Perform singular value decomposition (SVD):
 
-   $$
-   C = H \Sigma^2 H^T,
-   $$
+$$
+C = H \Sigma^2 H^T,
+$$
 
    where the columns of H are orthonormal POD modes.
 
@@ -104,9 +104,9 @@ where each column contains the standardized samples.
 
 1. Compute the cumulative energy ratio:
 
-   $$
-   \rho(N) = \frac{E_N}{E_M} = \frac{\sum_{k=1}^N \lambda_k}{\sum_{k=1}^M \lambda_k}.
-   $$
+$$
+\rho(N) = \frac{E_N}{E_M} = \frac{\sum_{k=1}^N \lambda_k}{\sum_{k=1}^M \lambda_k}.
+$$
 
 2. Select the smallest $ N $ such that 
 
@@ -133,18 +133,15 @@ $$
 1. Initialize model parameters 
 
 $$ 
-\theta^{(0)} \in \Theta 
-$$.
+\theta^{(0)} \in \Theta. 
+$$
 
 2. Load the constructed POD basis.
 3. Train the model by minimizing the loss:
 
-   $$
-   \hat{\theta} = \arg\min_{\theta \in \Theta}
-   \mathcal{L}(\mathcal{N}_\theta(a_j, \epsilon_j), u_j),
-   $$
-
-   obtaining the optimized parameters.
+$$
+\hat{\theta} = \arg\min_{\theta \in \Theta}\mathcal{L}(\mathcal{N}_\theta(a_j, \epsilon_j), u_j).
+$$
 
 ---
 
