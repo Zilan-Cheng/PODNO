@@ -61,19 +61,20 @@ Please make sure to place this file in the same parent directory as the correspo
 
 There are three possible strategies for generating snapshots for time-dependent PDEs:
 
-- Include the initial condition and final solution
+- Case 1: Include the initial condition and final solution
+- 
 $$
-\text{Case 1: } X_{\text{type 1}} = [u_0, u_{N_T}],
+X_{\text{type 1}} = [u_0, u_{N_T}],
 $$  
-- Include the solutions at each time step
+- Case 2: Include the solutions at each time step
   
 $$
-\text{Case 2: } X_{\text{type 2}} = [u_0, u_1, \dots, u_{N_T}],
+X_{\text{type 2}} = [u_0, u_1, \dots, u_{N_T}],
 $$  
-- Include the solutions at each time step and their differences
+- Case 3: Include the solutions at each time step and their differences
 
 $$
-\text{Case 3: } X_{\text{type 3}} = [u_0, u_1, \dots, u_{N_T},\ u_1 - u_0, u_2 - u_1, \dots, u_{N_T} - u_{N_T-1}].
+X_{\text{type 3}} = [u_0, u_1, \dots, u_{N_T},\ u_1 - u_0, u_2 - u_1, \dots, u_{N_T} - u_{N_T-1}].
 $$
 
 - **Efficient approach (used here):** take snapshots only from the *initial condition* and *final solution* as Case 1.  
