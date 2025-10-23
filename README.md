@@ -49,7 +49,7 @@ Please make sure to place this file in the same parent directory as the correspo
 
 ---
 
-## 🧠 PODNO Algorithm
+## ✏️ PODNO Algorithm
 
 ### **Inputs**
 
