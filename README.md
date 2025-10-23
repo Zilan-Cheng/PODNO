@@ -56,11 +56,11 @@ Please make sure to place this file in the same parent directory as the correspo
 - **Python** format data, see example of KP (npy), Sum-Sin (npz).
 
 | **Dataset** | **Path** | **Variables** | **Size** |
-|:------------|:---------|:---------------|:----------|
+|:------------:|:---------:|:--------------|:----------:|
 | **NLS** | `/NLS/pNLS_data.mat` | `u_re1`<br>`u_im1`<br>`u_re2`<br>`u_im2`<br>`p1` | (64, 64, 1000)<br>(64, 64, 1000)<br>(64, 64, 1000)<br>(64, 64, 1000)<br>(1, 1000) |
 | **KP** | `/KP/u1_512.npy`<br>`/KP/u_end_512.npy` | `u1_512`<br>`u_end_512` | (512, 512, 1000)<br>(512, 512, 1000) |
 | **Sum_Sin** | `/Sum_Sin/sine_data.npz` | `input`<br>`output` | (10000, 1024)<br>(10000, 1024) |
-| **Darcy** | `/Darcy/piececonst_r421_N1024_smooth1.mat`<br>`/Darcy/piececonst_r421_N1024_smooth1.mat` | `coeff`<br>`sol`<br>`coeff`<br>`sol` | (1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421) |
+| **Darcy** | <div align="center">`/Darcy/piececonst_r421_N1024_smooth1.mat`<br>`/Darcy/piececonst_r421_N1024_smooth1.mat`</div> | `coeff`<br>`sol` | (1000, 421, 421)<br>(1000, 421, 421) |
 
 ## 💬 Remarks
 
