@@ -52,7 +52,7 @@ Please make sure to place this file in the same parent directory as the correspo
 
 ## ✏️ Migrating PODNO to Other Training dataset
 
-- **Matlab** format data, see example of Darcy (real dataset), NLS (complex dataset)
+- **Matlab** format data, see example of Darcy (real dataset), NLS (complex dataset).
 
 - **Python** format data, see example of KP (npy), Sum-Sin (npz).
 
