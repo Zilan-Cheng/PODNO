@@ -18,6 +18,13 @@ The datasets used in this paper are available at:
 
 All dataset generation codes (including Darcy, NLS, KP, and sum_sin) are provided in the `/data/` directory.
 - **Pretrained model weights (.pt files):** due to large file sizes, all trained weights for **PODNO** and **FNO** are also stored in the same OneDrive link above are provided for reference only.
+
+---
+
+## 💾 Pretrained Model Weights
+
+- Due to large file sizes, **PODNO** and **FNO** pretrained model weights (`.pt` files) are also available in the same OneDrive link above.  
+
 ---
 
 ## ⚙️ Reproducing the Experiments
