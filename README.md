@@ -22,8 +22,12 @@ All dataset generation codes (including Darcy, NLS, KP, and Sum_Sin) are provide
 
 ## 💾 Pretrained Model Weights
 
-- Due to large file sizes, **PODNO** and **FNO** pretrained model weights (`.pt` files) are also available in the same OneDrive link above.  
+- Due to large file sizes, **PODNO** and **FNO** pretrained model weights (`.pt` files) are also available in the same OneDrive link above, under the following path: 
 
+  ```
+  /results/
+  ```
+  
 ---
 
 ## ⚙️ Reproducing the Experiments
