@@ -66,7 +66,7 @@ Please make sure to place this file in the same parent directory as the correspo
 | **NLS** | `/NLS/pNLS_data.mat` | `u_re1`<br>`u_im1`<br>`u_re2`<br>`u_im2`<br>`p1` | (64, 64, 1000)<br>(64, 64, 1000)<br>(64, 64, 1000)<br>(64, 64, 1000)<br>(1, 1000) | real part of initial condition<br>imaginary part of initial condition<br>real part of solution<br>imaginary part of solution<br>the constant coefficients |
 | **KP** | `/KP/u1_512.npy`<br>`/KP/u_end_512.npy` | `u1_512`<br>`u_end_512` | (512, 512, 1000)<br>(512, 512, 1000) | initial condition<br>solution |
 | **Sum_Sin** | `/Sum_Sin/sine_data.npz` | `input`<br>`output` | (10000, 1024)<br>(10000, 1024) | low-frequency input<br>high-frequency output |
-| **Darcy** | `/Darcy/piececonst_r421_`<br>`N1024_smooth1.mat`<br>`/Darcy/piececonst_r421_`<br>`N1024_smooth2.mat` | `coeff`<br>`sol`<br>`coeff`<br>`sol` | (1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421) | permeability field<br>solution<br>permeability field<br>solution |
+| **Darcy** | `/Darcy/piececonst_r421`<br>`_N1024_smooth1.mat`<br>`/Darcy/piececonst_r421`<br>`_N1024_smooth2.mat` | `coeff`<br>`sol`<br>`coeff`<br>`sol` | (1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421)<br>(1000, 421, 421) | permeability field<br>solution<br>permeability field<br>solution |
 
 ---
 
