@@ -126,9 +126,13 @@ $$
 If you find this work useful, please cite:
 
 ```bibtex
-@article{cheng2025podno,
-  title   = {PODNO: Proper Orthogonal Decomposition Neural Operators},
-  author  = {Zilan Cheng and Zhongjian Wang and Li-Lian Wang and Mejdi Azaiez},
-  journal = {arXiv preprint arXiv:2504.18513},
-  year    = {2025}
+@article{cheng2026podno,
+  title={PODNO: Proper Orthogonal Decomposition Neural Operators},
+  author={Cheng, Zilan and Wang, Zhongjian and Wang, Li-Lian and Azaiez, Mejdi},
+  journal={SIAM Journal on Scientific Computing},
+  volume={48},
+  number={3},
+  pages={C479--C504},
+  year={2026},
+  publisher={SIAM}
 }
